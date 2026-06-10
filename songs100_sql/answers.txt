@@ -1,0 +1,6 @@
+I would use the avg() function is SQL to calculate averages of the energy, danceability, valence of the users top 100 songs.
+I would then use the following data to build an estimate of the user's mood. Higher values of energy, danceability, valence represent a more joyful and energetic mood, while lower values would represent a more gloomy, sad mood. If the values lie somewhere in the middle it would mean a neutral and calm mood.
+I would then assign the moods calculated certain colours(using RGB) and build a gradient using the values.
+
+This might not be very representative since averages can be skewed by unusual spikes/pits in the data. If a user listened to a very energetic song once and also listened to gloomy songs, their average would lie somewhere in the middle suggesting a calm mood rather than happy/gloomy.
+We can instead use calculate the median values and use that to assign moods and build gradient profiles.
