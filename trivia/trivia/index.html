@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <link href="favicon trivia.png" rel="icon">
+        <title>Trivia!</title>
+        <script>
+            // Add code to check answers to questions
+            function checkb(event)
+            {
+                var trobj = event.srcElement;
+                let divb = trobj.parentElement;
+                if (trobj.dataset.correct == "true")
+                {
+                    trobj.style.backgroundColor = "green";
+                    divb.innerHTML = "<p>Correct!</p>" + divb.innerHTML;
+                }
+                else
+                {
+                    trobj.style.backgroundColor = "red";
+                    trobj.style.opacity = 0.7;
+                    divb.innerHTML = "<p>Incorrect.</p>" + divb.innerHTML;
+                }
+                let qclass = trobj.className;
+                for (var button of (document.querySelectorAll("." + qclass)))
+                {
+                    button.disabled = true;
+                }
+            }
+
+            function checki(event)
+            {
+                trobj = event.srcElement;
+                let divi = trobj.parentElement;
+                if (trobj.id == "Q1")
+                {
+                    if (parseInt(document.getElementById('A1').value) == 1947)
+                    {
+                        document.getElementById('A1').style.backgroundColor = "green";
+                        divi.innerHTML = "<p>Correct!</p>" + divi.innerHTML;
+                    }
+                    else
+                    {
+                        document.getElementById('A1').style.backgroundColor = "red";
+                        divi.innerHTML = "<p>Incorrect.</p>" + divi.innerHTML;
+                    }
+                }
+
+                if (trobj.id == "Q2")
+                {
+                    if (parseInt(document.getElementById('A2').value) == 1992)
+                    {
+                        document.getElementById('A2').style.backgroundColor = "green";
+                        divi.innerHTML = "<p>Correct!</p>" + divi.innerHTML;
+                    }
+                    else
+                    {
+                        document.getElementById('A2').style.backgroundColor = "red";
+                        divi.innerHTML = "<p>Incorrect.</p>" + divi.innerHTML;
+                    }
+                }
+
+                if (trobj.id == "Q3")
+                {
+                    if (parseInt(document.getElementById('A3').value) == 2008)
+                    {
+                        document.getElementById('A3').style.backgroundColor = "green";
+                        divi.innerHTML = "<p>Correct!</p>" + divi.innerHTML;
+                    }
+                    else
+                    {
+                        document.getElementById('A3').style.backgroundColor = "red";
+                        divi.innerHTML = "<p>Incorrect.</p>" + divi.innerHTML;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Adding multiple choice question here -->
+                <h3>What is the capital of India?</h3>
+                <div id="p1">
+                    <button class="q1" data-correct="true" onclick="checkb(event)">New Delhi</button>
+                    <button class="q1" onclick="checkb(event)">Mumbai</button>
+                    <button class="q1" onclick="checkb(event)">Gurugram</button>
+                    <button class="q1" onclick="checkb(event)">Noida</button>
+                </div>
+
+                <h3>What is the currency of India?</h3>
+                <div id="p2">
+                    <button class="q2" onclick="checkb(event)">Indian Dollar</button>
+                    <button class="q2" onclick="checkb(event)">Indian Dong</button>
+                    <button class="q2" data-correct="true" onclick="checkb(event)">Indian Rupee</button>
+                    <button class="q2" onclick="checkb(event)">Indian frank</button>
+                </div>
+
+                <h3>What is the national bird of India?</h3>
+                <div id="p3">
+                    <button class="q3" onclick="checkb(event)">Eagle</button>
+                    <button class="q3" data-correct="true" onclick="checkb(event)">Peacock</button>
+                    <button class="q3" onclick="checkb(event)">Dodo</button>
+                    <button class="q3" onclick="checkb(event)">Sparrow</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Adding free response question here -->
+                <h3>When did India gain independence?</h3>
+                <div id="p4">
+                    <input autocomplete="off" id="A1" name="year1" placeholder="Answer">
+                    <button onclick="checki(event)" id="Q1">Confirm</button>
+                </div>
+
+
+                <h3>When did decentralization take place in India?</h3>
+                <div id="p5">
+                    <input autocomplete="off" id="A2" name="year2" placeholder="Answer">
+                    <button onclick="checki(event)" id="Q2">Confirm</button>
+                </div>
+
+                <h3>When did India sign the US-India nuclear deal?</h3>
+                <div id="p6">
+                    <input autocomplete="off" id="A3" name="year3" placeholder="Answer">
+                    <button onclick="checki(event)" id="Q3">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1> Change your password </h1>
+    <form action="/changepass" method="post">
+        <input name="pass" type="text" autofocus autocomplete="off" placeholder="New Password">
+        <button type="submit" style="background-color: lightgreen;">Change</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table style="borders: 5px solid black;">
+        <thead>
+            <th>Company name</th>
+            <th>Latest Price</th>
+            <th>Symbol</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 3px solid black; padding:auto; margin:auto;">
+                    {{name}}
+                </td>
+                <td style="border: 3px solid black; padding:auto; margin:auto;">
+                    {{price}}
+                </td>
+                <td style="border: 3px solid black; padding:auto; margin:auto;">
+                    {{symbol}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
