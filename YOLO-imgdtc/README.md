@@ -10,4 +10,6 @@ The order to run the files are:
 6. evaluate.py
 
 The result-5-worst and result-5-best contain some of the best and worst images
-The accuracy figures from evaluate.py are saved under the 'test-eval' folder.
+The accuracy figures from evaluate.py are saved in the 'accuracy-figurest.txt' file.
+All predictions made on the test dataset are saved in the /runs_push/preds/ path.
+
