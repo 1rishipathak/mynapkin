@@ -1,3 +1,4 @@
+# prints mean-avg-precision (map) values
 from ultralytics import YOLO
 
 if __name__ == '__main__':
