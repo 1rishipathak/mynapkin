@@ -1,3 +1,4 @@
+# this basically tests if the images are being labelled properly (does'nt guarantee use of correct class)
 from ultralytics import YOLO
 import yaml
 
