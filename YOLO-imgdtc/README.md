@@ -1,3 +1,5 @@
+**-- Kindly refer to answers.md for the answers to the written question in assessment --**
+
 This project uses yolov8 (yolov8n) to identify dogs, cats, persons in an image.
 The main dataset contains ~9k images (labelled) downloaded from roboflow, with already seperated into train,test,split sets.
 It also contains a 'make_small_dataset.py' python script to reduce the size of the dataset (to make training faster and reduce compute required).
